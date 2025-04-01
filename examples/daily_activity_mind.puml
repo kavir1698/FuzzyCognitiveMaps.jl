@@ -1,0 +1,122 @@
+@startuml FCM_Concepts
+skinparam defaultTextAlignment center
+
+component "time_morning" as time_morning #lightBlue
+component "time_evening" as time_evening #lightBlue
+component "bad_weather" as bad_weather #lightBlue
+component "traffic_congestion" as traffic_congestion #lightBlue
+component "physical_energy" as physical_energy
+component "mental_energy" as mental_energy
+component "hunger" as hunger
+component "stress_level" as stress_level
+component "exercise_need" as exercise_need
+component "shopping_need" as shopping_need
+component "work_motivation" as work_motivation
+component "gym_motivation" as gym_motivation
+component "shopping_motivation" as shopping_motivation
+component "use_car" as use_car
+component "use_public_transport" as use_public_transport
+component "stay_home" as stay_home
+time_morning -[#green,thickness=3]-> traffic_congestion : 0.3
+time_morning -[#green,thickness=4]-> physical_energy : 0.4
+time_morning -[#green,thickness=4]-> mental_energy : 0.4
+time_morning -[#green,thickness=2]-> hunger : 0.2
+time_morning -[#green,thickness=7]-> work_motivation : 0.7
+time_morning -[#green,thickness=4]-> gym_motivation : 0.4
+time_morning -[#green,thickness=3]-> shopping_motivation : 0.3
+time_morning -[#green,thickness=4]-> use_car : 0.4
+time_morning -[#green,thickness=3]-> use_public_transport : 0.3
+time_morning -[#red,thickness=5]-> stay_home : -0.5
+time_evening -[#green,thickness=2]-> traffic_congestion : 0.2
+time_evening -[#red,thickness=3]-> physical_energy : -0.3
+time_evening -[#red,thickness=4]-> mental_energy : -0.4
+time_evening -[#green,thickness=3]-> hunger : 0.3
+time_evening -[#green,thickness=3]-> stress_level : 0.3
+time_evening -[#green,thickness=2]-> exercise_need : 0.2
+time_evening -[#green,thickness=4]-> shopping_need : 0.4
+time_evening -[#red,thickness=6]-> work_motivation : -0.6
+time_evening -[#green,thickness=3]-> gym_motivation : 0.3
+time_evening -[#green,thickness=5]-> shopping_motivation : 0.5
+time_evening -[#green,thickness=3]-> use_car : 0.3
+time_evening -[#green,thickness=2]-> use_public_transport : 0.2
+time_evening -[#green,thickness=4]-> stay_home : 0.4
+bad_weather -[#green,thickness=4]-> traffic_congestion : 0.4
+bad_weather -[#green,thickness=2]-> stress_level : 0.2
+bad_weather -[#green,thickness=3]-> shopping_need : 0.3
+bad_weather -[#red,thickness=2]-> work_motivation : -0.2
+bad_weather -[#red,thickness=4]-> gym_motivation : -0.4
+bad_weather -[#green,thickness=6]-> use_car : 0.6
+bad_weather -[#red,thickness=5]-> use_public_transport : -0.5
+bad_weather -[#green,thickness=4]-> stay_home : 0.4
+traffic_congestion -[#green,thickness=3]-> stress_level : 0.3
+traffic_congestion -[#red,thickness=3]-> work_motivation : -0.3
+traffic_congestion -[#red,thickness=7]-> use_car : -0.7
+traffic_congestion -[#green,thickness=6]-> use_public_transport : 0.6
+traffic_congestion -[#green,thickness=2]-> stay_home : 0.2
+physical_energy -[#green,thickness=2]-> mental_energy : 0.2
+physical_energy -[#red,thickness=3]-> stress_level : -0.3
+physical_energy -[#green,thickness=3]-> exercise_need : 0.3
+physical_energy -[#green,thickness=2]-> shopping_need : 0.2
+physical_energy -[#green,thickness=4]-> work_motivation : 0.4
+physical_energy -[#green,thickness=6]-> gym_motivation : 0.6
+physical_energy -[#green,thickness=4]-> shopping_motivation : 0.4
+physical_energy -[#green,thickness=3]-> use_car : 0.3
+physical_energy -[#green,thickness=2]-> use_public_transport : 0.2
+physical_energy -[#red,thickness=4]-> stay_home : -0.4
+mental_energy -[#green,thickness=2]-> physical_energy : 0.2
+mental_energy -[#red,thickness=2]-> hunger : -0.2
+mental_energy -[#red,thickness=4]-> stress_level : -0.4
+mental_energy -[#green,thickness=5]-> work_motivation : 0.5
+mental_energy -[#green,thickness=3]-> gym_motivation : 0.3
+mental_energy -[#green,thickness=3]-> shopping_motivation : 0.3
+mental_energy -[#green,thickness=2]-> use_car : 0.2
+mental_energy -[#green,thickness=3]-> use_public_transport : 0.3
+mental_energy -[#red,thickness=3]-> stay_home : -0.3
+hunger -[#red,thickness=2]-> mental_energy : -0.2
+hunger -[#green,thickness=2]-> stress_level : 0.2
+hunger -[#red,thickness=3]-> exercise_need : -0.3
+hunger -[#green,thickness=4]-> shopping_need : 0.4
+hunger -[#red,thickness=2]-> work_motivation : -0.2
+hunger -[#red,thickness=4]-> gym_motivation : -0.4
+hunger -[#green,thickness=6]-> shopping_motivation : 0.6
+hunger -[#green,thickness=2]-> use_car : 0.2
+stress_level -[#red,thickness=3]-> physical_energy : -0.3
+stress_level -[#red,thickness=4]-> mental_energy : -0.4
+stress_level -[#green,thickness=2]-> hunger : 0.2
+stress_level -[#red,thickness=2]-> exercise_need : -0.2
+stress_level -[#red,thickness=3]-> work_motivation : -0.3
+stress_level -[#red,thickness=2]-> gym_motivation : -0.2
+stress_level -[#red,thickness=1]-> shopping_motivation : -0.1
+stress_level -[#green,thickness=3]-> stay_home : 0.3
+exercise_need -[#green,thickness=8]-> gym_motivation : 0.8
+exercise_need -[#green,thickness=2]-> use_car : 0.2
+exercise_need -[#green,thickness=3]-> use_public_transport : 0.3
+exercise_need -[#red,thickness=4]-> stay_home : -0.4
+shopping_need -[#green,thickness=8]-> shopping_motivation : 0.8
+shopping_need -[#green,thickness=3]-> use_car : 0.3
+shopping_need -[#green,thickness=4]-> use_public_transport : 0.4
+shopping_need -[#red,thickness=5]-> stay_home : -0.5
+work_motivation -[#red,thickness=2]-> stress_level : -0.2
+work_motivation -[#red,thickness=6]-> gym_motivation : -0.6
+work_motivation -[#red,thickness=4]-> shopping_motivation : -0.4
+work_motivation -[#red,thickness=7]-> stay_home : -0.7
+gym_motivation -[#red,thickness=2]-> hunger : -0.2
+gym_motivation -[#red,thickness=3]-> stress_level : -0.3
+gym_motivation -[#red,thickness=5]-> work_motivation : -0.5
+gym_motivation -[#red,thickness=3]-> shopping_motivation : -0.3
+gym_motivation -[#red,thickness=5]-> stay_home : -0.5
+shopping_motivation -[#red,thickness=3]-> work_motivation : -0.3
+shopping_motivation -[#red,thickness=3]-> gym_motivation : -0.3
+shopping_motivation -[#red,thickness=4]-> stay_home : -0.4
+use_car -[#red,thickness=8]-> use_public_transport : -0.8
+use_car -[#red,thickness=2]-> stay_home : -0.2
+use_public_transport -[#red,thickness=8]-> use_car : -0.8
+use_public_transport -[#red,thickness=2]-> stay_home : -0.2
+stay_home -[#red,thickness=3]-> stress_level : -0.3
+stay_home -[#red,thickness=2]-> exercise_need : -0.2
+stay_home -[#red,thickness=6]-> work_motivation : -0.6
+stay_home -[#red,thickness=5]-> gym_motivation : -0.5
+stay_home -[#red,thickness=4]-> shopping_motivation : -0.4
+stay_home -[#red,thickness=3]-> use_car : -0.3
+stay_home -[#red,thickness=3]-> use_public_transport : -0.3
+@enduml

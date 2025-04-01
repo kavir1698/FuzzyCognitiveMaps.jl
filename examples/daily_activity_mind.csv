@@ -1,0 +1,17 @@
+concept,time_morning,time_evening,bad_weather,traffic_congestion,physical_energy,mental_energy,hunger,stress_level,exercise_need,shopping_need,work_motivation,gym_motivation,shopping_motivation,use_car,use_public_transport,stay_home,external
+time_morning,0,0,0,0.3,0.4,0.4,0.2,0,0,0,0.7,0.4,0.3,0.4,0.3,-0.5,true
+time_evening,0,0,0,0.2,-0.3,-0.4,0.3,0.3,0.2,0.4,-0.6,0.3,0.5,0.3,0.2,0.4,true
+bad_weather,0,0,0,0.4,0,0,0,0.2,0,0.3,-0.2,-0.4,0,0.6,-0.5,0.4,true
+traffic_congestion,0,0,0,0,0,0,0,0.3,0,0,-0.3,0,0,-0.7,0.6,0.2,true
+physical_energy,0,0,0,0,0,0.2,0,-0.3,0.3,0.2,0.4,0.6,0.4,0.3,0.2,-0.4,false
+mental_energy,0,0,0,0,0.2,0,-0.2,-0.4,0,0,0.5,0.3,0.3,0.2,0.3,-0.3,false
+hunger,0,0,0,0,0,-0.2,0,0.2,-0.3,0.4,-0.2,-0.4,0.6,0.2,0,0,false
+stress_level,0,0,0,0,-0.3,-0.4,0.2,0,-0.2,0,-0.3,-0.2,-0.1,0,0,0.3,false
+exercise_need,0,0,0,0,0,0,0,0,0,0,0,0.8,0,0.2,0.3,-0.4,false
+shopping_need,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.3,0.4,-0.5,false
+work_motivation,0,0,0,0,0,0,0,-0.2,0,0,0,-0.6,-0.4,0,0,-0.7,false
+gym_motivation,0,0,0,0,0,0,-0.2,-0.3,0,0,-0.5,0,-0.3,0,0,-0.5,false
+shopping_motivation,0,0,0,0,0,0,0,0,0,0,-0.3,-0.3,0,0,0,-0.4,false
+use_car,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.8,-0.2,false
+use_public_transport,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.8,0,-0.2,false
+stay_home,0,0,0,0,0,0,0,-0.3,-0.2,0,-0.6,-0.5,-0.4,-0.3,-0.3,0,false
